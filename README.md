@@ -16,7 +16,16 @@
 ```js
 import maxValues from 'max-values';
 
-maxValues('unicorns'); // unicorns
+const input = [{ name: 'Bob',   age: 16, skills: { cryptography: 9 }},
+               { name: 'Alice', age: 14, skills: { cryptography: 10 }}]
+
+maxValues(input, ['age']);
+  // [ { name: 'Bob',   age: 16, skills: { cryptography: 9 }, maxAge: true },
+  //   { name: 'Alice', age: 14, skills: { cryptography: 10 }}]
+
+maxValues(input, ['skills.cryptography']);
+  // [ { name: 'Bob',   age: 16, skills: { cryptography: 9 }},
+  //   { name: 'Alice', age: 14, skills: { cryptography: 10 }, maxSkillsCryptography: true}]
 ```
 
 ## API
