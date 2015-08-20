@@ -32,23 +32,30 @@ maxValues(); // undefined ¯\_(ツ)_/¯
 
 ## API
 
-### maxValues(input, [options])
+### maxValues(arr, props)
 
-#### input
+Return `Array` of the almost the same `Objects`. New objects will have new `maxProp: true` field, if this object has the maximum value for this prop amongst all the objects.
+
+#### arr
 
 *Required*  
-Type: `String`
+Type: `Array` of `Objects`  
+Example: `[{ age: 16 }, { age: 18 }]`
 
-Lorem ipsum.
+Objects with similar structure.
 
-#### options
+#### props
 
-##### foo
+*Required*  
+Type: `Array` of props `String`  
+Example: `['age', 'skills.cryptography']`
 
-Type: `Boolean`  
-Default: `false`
+Properties for which you want to find maximum values. Nested properties should be defined with dot notation. Resulting name for maxProps is prepended by 'max' and camelcased `prop`:
 
-Lorem ipsum.
+```
+age => maxAge
+skills.cryptography => maxSkillsCryptography
+```
 
 ## License
 
