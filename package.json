@@ -1,6 +1,6 @@
 {
   "name": "max-values",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "identify maximum values within object properties in array",
   "main": "index.es5.js",
   "scripts": {
