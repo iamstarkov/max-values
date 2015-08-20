@@ -16,17 +16,12 @@
 ```js
 import maxValues from 'max-values';
 
-const input = [{ name: 'Bob',   age: 16, skills: { cryptography: 9 }},
-               { name: 'Alice', age: 14, skills: { cryptography: 10 }}]
+const input = [{ name: 'Bob',   age: 25, skills: { crypto: 5 }},
+               { name: 'Alice', age: 14, skills: { crypto: 10 }}]
 
-maxValues(input, ['age']);
-  // [ { name: 'Bob',   age: 16, skills: { cryptography: 9 }, maxAge: true },
-  //   { name: 'Alice', age: 14, skills: { cryptography: 10 }}]
-
-maxValues(input, ['skills.cryptography']);
-  // [ { name: 'Bob',   age: 16, skills: { cryptography: 9 }},
-  //   { name: 'Alice', age: 14, skills: { cryptography: 10 }, maxSkillsCryptography: true}]
-
+deepEqual(maxValues(input, ['age', 'skills.crypto']);
+  // [{ name: 'Bob',   age: 25, skills: { crypto: 5  }, maxAge: true },
+  //  { name: 'Alice', age: 14, skills: { crypto: 10 }, maxSkillsCrypto: true }]
 maxValues(); // undefined ¯\_(ツ)_/¯
 ```
 
