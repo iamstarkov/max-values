@@ -16,12 +16,14 @@
 ```js
 import maxValues from 'max-values';
 
-const input = [{ name: 'Bob',   age: 25, skills: { crypto: 5 }},
-               { name: 'Alice', age: 14, skills: { crypto: 10 }}]
+const input = [{ name: 'Bob',   age: 25, skills: { crypto: 1  }},
+               { name: 'Some',  age: 14, skills: { crypto: 5 }},
+               { name: 'Alice', age: 7,  skills: { crypto: 10 }}]
 
-deepEqual(maxValues(input, ['age', 'skills.crypto']);
-  // [{ name: 'Bob',   age: 25, skills: { crypto: 5  }, maxAge: true },
-  //  { name: 'Alice', age: 14, skills: { crypto: 10 }, maxSkillsCrypto: true }]
+maxValues(input, ['age', 'skills.crypto']);
+  // [{ name: 'Bob',   age: 25, skills: { crypto: 1  }, maxAge: true },
+  //  { name: 'Some',  age: 14, skills: { crypto: 5 }},
+  //  { name: 'Alice', age: 7,  skills: { crypto: 10 }, maxSkillsCrypto: true }]
 ```
 
 ## API
