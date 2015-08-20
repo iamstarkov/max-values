@@ -22,8 +22,6 @@ const input = [{ name: 'Bob',   age: 25, skills: { crypto: 5 }},
 deepEqual(maxValues(input, ['age', 'skills.crypto']);
   // [{ name: 'Bob',   age: 25, skills: { crypto: 5  }, maxAge: true },
   //  { name: 'Alice', age: 14, skills: { crypto: 10 }, maxSkillsCrypto: true }]
-
-maxValues(); // undefined ¯\_(ツ)_/¯
 ```
 
 ## API
