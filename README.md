@@ -26,6 +26,8 @@ maxValues(input, ['age']);
 maxValues(input, ['skills.cryptography']);
   // [ { name: 'Bob',   age: 16, skills: { cryptography: 9 }},
   //   { name: 'Alice', age: 14, skills: { cryptography: 10 }, maxSkillsCryptography: true}]
+
+maxValues(); // undefined ¯\_(ツ)_/¯
 ```
 
 ## API
