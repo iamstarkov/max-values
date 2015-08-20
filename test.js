@@ -1,7 +1,6 @@
 import { equal } from 'assert';
 import maxValues from './index';
 
-
 const input = [{ name: 'Bob',   age: 16, skills: { cryptography: 9 }},
                { name: 'Alice', age: 14, skills: { cryptography: 10 }}]
 
