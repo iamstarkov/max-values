@@ -42,5 +42,9 @@
     "mocha": "*",
     "npm-run-all": "*",
     "trash": "*"
+  },
+  "dependencies": {
+    "camelcase": "^1.2.1",
+    "ramda": "^0.17.1"
   }
 }
