@@ -44,7 +44,7 @@
     "rimraf": "^2.5.2"
   },
   "dependencies": {
-    "camelcase": "^1.2.1",
-    "ramda": "^0.17.1"
+    "camelcase": "^2.1.0",
+    "ramda": "^0.19.1"
   }
 }
