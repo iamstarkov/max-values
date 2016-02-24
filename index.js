@@ -1,14 +1,17 @@
-import { split, last, sortBy, path } from 'ramda';
+import R from 'ramda';
 import camelcase from 'camelcase';
 
-const splitByDot = split('.');
-const maxCamel = camelcase.bind(null, 'max');
+const sortBy = R.pipe(R.split('.'), R.path, R.sortBy);
+const isNotNil = R.pipe(R.isNil, R.not);
+const sortedAndFiltered = (prop, arr) => R.pipe(
+  sortBy(prop),
+  R.filter(R.pathSatisfies(isNotNil, R.split('.', prop))),
+  R.last)(arr);
 
 export default function maxValues(arr, props) {
   if (!arr || !props) return;
   props.forEach(prop => {
-    const sortByProp = sortBy(path(splitByDot(prop)));
-    last(sortByProp(arr))[maxCamel(prop)] = true;
+    sortedAndFiltered(prop, arr)[camelcase('max', prop)] = true;
   });
   return arr;
 };
