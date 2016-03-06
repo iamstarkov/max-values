@@ -1,8 +1,9 @@
 import { equal, deepEqual } from 'assert';
+import requireUncached from 'require-uncached';
 import maxValues from './index';
 
-import simple from './simple.json';
-import complicated from './complicated.json';
+const simple = requireUncached('./simple.json');
+const complicated = requireUncached('./complicated.json');
 
 it('should simple maxValues', () =>
   deepEqual(maxValues(simple.input, simple.props), simple.expected));

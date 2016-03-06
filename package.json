@@ -41,6 +41,7 @@
     "isparta": "*",
     "mocha": "*",
     "npm-run-all": "*",
+    "require-uncached": "^1.0.2",
     "rimraf": "^2.5.2"
   },
   "dependencies": {
