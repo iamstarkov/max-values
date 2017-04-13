@@ -36,7 +36,7 @@
   "homepage": "https://github.com/iamstarkov/max-values#readme",
   "devDependencies": {
     "assert": "*",
-    "babel": "^5.0.0",
+    "babel": "^6.23.0",
     "coveralls": "*",
     "isparta": "*",
     "mocha": "*",
@@ -45,7 +45,7 @@
     "rimraf": "^2.5.2"
   },
   "dependencies": {
-    "camelcase": "^2.1.0",
-    "ramda": "^0.19.1"
+    "camelcase": "^4.1.0",
+    "ramda": "^0.23.0"
   }
 }
